@@ -1,7 +1,3 @@
-TailWindCss
-
-SASS/SCSS
-$ npm i sass
-
+Usage
 $ npm i
 $ npm run dev
