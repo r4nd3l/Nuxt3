@@ -1,9 +1,5 @@
-# R4M (baba) Köszöntő
+---
+title: Header
+---
 
-Szeretettel köszöntelek te édes kicsi csöppség,
-
-Életedet kísérje áldás és egészség!
-
-Szüleidnek te légy a fény, életük aranya,
-
-Mosolyod legyen napjaik csillaga!
+# /content/index.md

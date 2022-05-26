@@ -1,17 +1,14 @@
 <template>
-  <section
-    class="_sample flex flex-col justify-center items-center bg-gradient-to-r from-cyan-500 to-blue-500 h-screen"
-  >
-    <i
-      class="fa-solid fa-baby-carriage text-5xl border-2 border-white rounded-full p-4 mb-8"
-    ></i>
-    <ContentDoc class="text-center w-2/3" />
-  </section>
+  <div>
+    <ContentNavigation v-slot="{ navigation }">
+      <ul>
+        <li v-for="link of navigation" :key="link._path">
+          <NuxtLink :to="link._path">
+            {{ link.title }}
+          </NuxtLink>
+        </li>
+      </ul>
+    </ContentNavigation>
+    <NuxtPage />
+  </div>
 </template>
-
-<style lang="scss">
-._sample {
-  font-family: fantasy;
-  font-size: 3rem;
-}
-</style>
