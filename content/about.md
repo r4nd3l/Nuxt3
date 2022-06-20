@@ -1,1 +1,3 @@
-Text - content/about.md
+# About page - /content/about.md
+
+Back to the [home page](/).

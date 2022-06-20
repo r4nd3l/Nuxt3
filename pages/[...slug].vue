@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <main>
     <!-- <NuxtLayout name="base"> -->
     <!-- <template #header> -->
     <ContentDoc />
     <!-- </template> -->
     <!-- </NuxtLayout> -->
-  </div>
+  </main>
 </template>
 
 <script setup>
