@@ -1,3 +1,1 @@
-# About Content v2
-
-[Back home](/)
+Text - content/about.md
