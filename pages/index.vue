@@ -13,6 +13,7 @@
 <style>
 .blocks {
   border: 1px solid red;
-  margin: 0.5rem;
+  margin: 1rem 0;
+  padding: 1rem;
 }
 </style>
