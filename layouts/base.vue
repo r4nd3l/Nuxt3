@@ -1,7 +1,15 @@
+<script setup>
+const { data: navigation } = await useAsyncData("navigation", () => {
+  return fetchContentNavigation();
+});
+</script>
+
 <template>
   <div class="base-container">
     <header>
-      <slot name="navigation"> Content of /layouts/base.vue </slot>
+      <slot name="navigation">
+        <AppNavigation :navigation-tree="navigation" />
+      </slot>
     </header>
     <main>
       <p class="header">Header block</p>

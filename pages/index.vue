@@ -1,10 +1,10 @@
 <template>
   <main>
-    <ContentList path="/home" v-slot="{ list }">
-      <div class="blocks" v-for="home in list" :key="home._path">
-        <h2>{{ home.title }}</h2>
-        <p>{{ home.description }}</p>
-        <ContentDoc path="/home" />
+    <ContentList path="/main" v-slot="{ list }">
+      <div class="blocks" v-for="main in list" :key="main._path">
+        <h2>{{ main.title }}</h2>
+        <p>{{ main.description }}</p>
+        <ContentDoc path="/main" />
       </div>
     </ContentList>
   </main>
