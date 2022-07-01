@@ -8,7 +8,7 @@ const { data: navigation } = await useAsyncData("navigation", () => {
   <div class="base-container">
     <header>
       <slot name="navigation">
-        <AppNavigation :navigation-tree="navigation" />
+        <AppNavigationTree :navigation-tree="navigation" />
       </slot>
     </header>
     <main>
