@@ -1,19 +1,18 @@
-<template>
-  <main>
-    <ContentList path="/main" v-slot="{ list }">
-      <div class="blocks" v-for="main in list" :key="main._path">
-        <h2>{{ main.title }}</h2>
-        <p>{{ main.description }}</p>
-        <ContentDoc path="/main" />
-      </div>
-    </ContentList>
-  </main>
-</template>
+<script setup>
+const { data: equalQuery } = await useAsyncData("equal", () => {
+  return queryContent("/about").find();
+});
+</script>
 
-<style>
-.blocks {
-  border: 1px solid red;
-  margin: 1rem 0;
-  padding: 1rem;
-}
-</style>
+<template>
+  <NuxtLayout>
+    <ul v-if="equalQuery" style="color: black">
+      <li v-for="item in equalQuery">
+        <h1>{{ item.title }}</h1>
+        <h1>{{ item.description }}</h1>
+        <h1>{{ item.body.children[0].children[0].value }}</h1>
+        <h1>{{ item.body.children[1].children[0].value }}</h1>
+      </li>
+    </ul>
+  </NuxtLayout>
+</template>
