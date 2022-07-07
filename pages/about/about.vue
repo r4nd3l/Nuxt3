@@ -1,5 +1,5 @@
 <template>
   <NuxtLayout>
-    <section v-if="content">kolbas</section>
+    <AboutBlock />
   </NuxtLayout>
 </template>

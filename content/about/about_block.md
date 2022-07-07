@@ -1,10 +1,10 @@
 ---
-  title: "MyMainTitle_19"
-  description: "MySweetDescriptions"
+  title: "MyAboutTitle_19"
+  description: "MyAboutDescriptions"
 ---
 
-LoremIpsum_Paragraph_01
+About_Paragraph_01
 
-LoremIpsum_Paragraph_02
+About_Paragraph_02
 
-LoremIpsum_Paragraph_03
+About_Paragraph_03
