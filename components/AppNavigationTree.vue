@@ -19,12 +19,16 @@ defineProps({
         class="sub-navigation"
       /> -->
     </li>
+    <hr />
+    <li><a href="/"> Main_href </a></li>
+    <li><a href="/home"> Home_href </a></li>
+    <li><a href="/about"> About_href </a></li>
   </ul>
 </template>
 
 <style scoped>
 .navigation li {
-  list-style-type: "_ ";
+  list-style-type: "";
 }
 
 .navigation ul {
