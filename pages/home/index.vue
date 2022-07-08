@@ -1,5 +1,5 @@
 <template>
   <NuxtLayout>
-    <MainBlock />
+    <HomeBlock />
   </NuxtLayout>
 </template>
