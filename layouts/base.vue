@@ -1,4 +1,5 @@
 <script setup>
+const route = useRoute();
 const { data: navigation } = await useAsyncData("navigation", () => {
   return fetchContentNavigation();
 });
@@ -8,8 +9,10 @@ const { data: navigation } = await useAsyncData("navigation", () => {
   <div class="base-container">
     <header>
       <slot name="navigation">
-        <AppNavigationTree :navigation-tree="navigation" />
+        <AppNavigation :navigation-tree="navigation" />
       </slot>
+      <hr />
+      <code>Route binding => {{ route.path }}</code>
     </header>
     <main>
       <p class="header">Header block</p>

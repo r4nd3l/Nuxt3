@@ -1,5 +1,5 @@
 <script setup>
-const { data: content } = await useAsyncData("home_block", () => {
+const { data: content } = await useAsyncData("home", () => {
   return queryContent("/home").find();
 });
 </script>
