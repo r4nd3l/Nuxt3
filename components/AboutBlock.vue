@@ -1,25 +1,31 @@
-<script setup>
-const { data: content } = await useAsyncData("about", () => {
-  return queryContent("/about").find();
-});
-</script>
+<template>
+  <main>
+    <ContentList path="/about" v-slot="{ list }">
+      <div class="blocks" v-for="about in list" :key="about._path">
+        <h2>{{ about.title }}</h2>
+        <p>{{ about.description }}</p>
 
-<template v-if="content">
-  <section v-for="item in content">
-    <div>
-      <h1>{{ item.title }}</h1>
-      <h1>{{ item.description }}</h1>
-      <h1>{{ item.body.children[0].children[0].value }}</h1>
-      <!-- <h1>{{ item.body.children[1].children[0].value }}</h1> -->
-    </div>
-  </section>
-  <div>AboutBlock</div>
+        <hr />
+        <pre>{{ about.body.children }}</pre>
+        <hr />
+
+        <div v-for="(content, index) in about.body.children">
+          <b>{{ index }}</b>
+          <pre class="contentBody">{{ content.children[0].value }}</pre>
+        </div>
+      </div>
+    </ContentList>
+  </main>
 </template>
 
 <style scoped>
-section {
+.blocks {
   border: 1px solid red;
-  margin-top: 1rem;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+.contentBody {
+  border: 10px solid green;
   padding: 1rem;
 }
 </style>

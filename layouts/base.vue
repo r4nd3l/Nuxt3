@@ -11,8 +11,6 @@ const { data: navigation } = await useAsyncData("navigation", () => {
       <slot name="navigation">
         <AppNavigation :navigation-tree="navigation" />
       </slot>
-      <hr />
-      <code>Route binding => {{ route.path }}</code>
     </header>
     <main>
       <p class="header">Header block</p>
