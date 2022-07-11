@@ -12,23 +12,31 @@ const { data: navigation } = await useAsyncData("navigation", () => {
         <AppNavigation :navigation-tree="navigation" />
       </slot>
     </header>
-    <main>
+    <section class="bg-gray-200">
       <p class="header">Header block</p>
       <!-- Real content -->
       <slot />
       <!-- Real content -->
       <p class="footer">Footer block</p>
-    </main>
+    </section>
   </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
 .base-container,
 header,
-.header,
-.footer {
-  border: 1px solid red;
-  margin: 1rem 0;
-  padding: 1rem;
+section {
+  border: 1px solid blue;
+  margin: 1rem;
+
+  p {
+    border: 1px solid red;
+    margin: 1rem 0;
+    padding: 1rem 0;
+  }
+
+  slot {
+    border: 1px solid green;
+  }
 }
 </style>
