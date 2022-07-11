@@ -13,7 +13,7 @@ const { data: content } = await useAsyncData("home", () => {
       <!-- <h1>{{ item.body.children[1].children[0].value }}</h1> -->
     </div>
   </section>
-  <div>omeBlock</div>
+  <div>HomeBlock</div>
 </template>
 
 <style scoped>
