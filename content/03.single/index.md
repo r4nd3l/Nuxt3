@@ -1,6 +1,7 @@
 ---
 title: "Single"
 description: "A single page of content."
+note: "SCSS and SASS npm packages are added!"
 ---
 
 Sociosqu malesuada dictum, beatae tristique ullamcorper quidem eveniet, cillum! Repudiandae, viverra, posuere dignissimos expedita per, praesent etiam, deserunt tempore aenean dui! Natus facilisi ullamcorper iaculis praesent pulvinar animi. Libero dolores rerum elit nisl minim accusamus vitae! Urna do, iaculis integer, dolorem, accusamus? Cupidatat condimentum illum dis venenatis quos quis repudiandae laboriosam inceptos quibusdam fringilla? Tenetur, semper earum architecto sunt explicabo fusce vitae deleniti sunt blandit mollitia sem eligendi convallis ultrices justo totam commodo metus nullam fugit! Volutpat, pretium cursus quis, quisque. Eius, imperdiet lobortis cras aliquam occaecati. Wisi nonummy sed, dolores porta, eros natus sodales voluptatum? Mollis, nesciunt molestie, cupidatat.
