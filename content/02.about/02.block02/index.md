@@ -3,6 +3,6 @@
   description: "AboutDescriptions_02"
 ---
 
-About02_Paragraph-01
+About02_Paragraph_a
 
-About02_Paragraph-02
+About02_Paragraph_b

@@ -1,12 +1,7 @@
 ---
-  title: "AboutTitle_01"
-  description: "AboutDescriptions_01"
+  title: "AboutTitle_banner"
+  description: "AboutDescriptions_banner"
 ---
-
-About01_Paragraph-01
-
-About01_Paragraph-02
-About01_Paragraph-02
 
 Ad quaerat et? Ullamco corporis, fuga, impedit voluptatem pariatur dictumst fames dictum, officia sociosqu integer molestiae labore nullam? Blandit pede, atque earum lacinia platea. Repudiandae hac maiores nunc? Nesciunt sint laborum rerum lobortis adipisicing dapibus. Modi, sociis wisi. Penatibus, primis. Cupidatat modi odio accumsan! Platea ad, volutpat phasellus! Fugit? Cumque, laoreet, ipsa at proin, natus! Perferendis ullamcorper, auctor suspendisse! Platea, dictum assumenda fugit? Tenetur, praesent molestiae quisque facilisis. In. Voluptas? Voluptas wisi tempus molestie, consectetur soluta praesent donec quod nesciunt, per cubilia. Tortor molestiae fringilla? Ridiculus? Pede potenti, vel etiam dolores, quod vestibulum nascetur rem turpis, penatibus montes cumque tempor.
 

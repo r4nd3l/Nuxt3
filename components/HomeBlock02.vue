@@ -1,6 +1,6 @@
 <template>
   <main>
-    <ContentDoc path="/main" v-slot="{ doc }">
+    <ContentDoc path="/home/block02" v-slot="{ doc }">
       <h1>{{ doc.title }}</h1>
       <h1>{{ doc.description }}</h1>
       <h1>{{ doc.note }}</h1>

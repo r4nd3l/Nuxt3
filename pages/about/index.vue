@@ -1,5 +1,7 @@
 <template>
   <NuxtLayout name="base">
-    <AboutBlock />
+    <AboutBanner />
+    <AboutBlock01 />
+    <AboutBlock02 />
   </NuxtLayout>
 </template>
