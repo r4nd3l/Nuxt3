@@ -1,8 +1,5 @@
 ---
-  title: "AboutTitle_01"
-  description: "AboutDescriptions_01"
+title: "AboutTitle_01"
 ---
 
-About01_Paragraph_a
-
-About01_Paragraph_b
+If a dog chews shoes whose shoes does he choose?

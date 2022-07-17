@@ -1,6 +1,6 @@
 ---
   title: "block_02_Title"
-  description: "block_02_Descriptions"
+  button: "Get More"
 ---
 
-block_02_Paragraph
+Exercitationem congue aspernatur similique, nisl quia laboriosam dapibus diam sunt metus! Qui voluptatum congue montes non occaecat ducimus optio wisi.

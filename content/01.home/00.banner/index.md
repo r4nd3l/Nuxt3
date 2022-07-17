@@ -1,6 +1,6 @@
 ---
   title: "banner_00_Title"
-  description: "banner_00_Descriptions"
+  button: "Get started Banner"
 ---
 
-banner_00_Paragraph
+Mollit dolore similique nascetur quidem facilis vestibulum do sint molestie? Cum dapibus? Id iusto condimentum risus? Eos beatae nonummy hic.
