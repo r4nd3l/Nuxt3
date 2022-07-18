@@ -1,1 +1,1 @@
-# example commit
+# NetlifyCMS version
