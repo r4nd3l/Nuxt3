@@ -16,6 +16,7 @@
   "dependencies": {
     "daisyui": "^2.19.0",
     "material-icons": "^1.11.4",
+    "netlify-cms": "^2.10.192",
     "sass": "^1.53.0"
   }
 }
