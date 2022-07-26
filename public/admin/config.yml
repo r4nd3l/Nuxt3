@@ -1,28 +1,108 @@
-backend:
-  # name: git-gateway
-  name: test-repo
-  repo: r4nd3l/Nuxt3
-  branch: feature/netlify # Branch to update (optional; defaults to master)
+site_url: https://ntn-boilerplate.netlify.app/
+logo_url: https://ntn-boilerplate.netlify.app/icon.png
 
-  # This line should *not* be indented
 publish_mode: editorial_workflow
+backend:
+  name: git-gateway
+  branch: feature/netlify
+  squash_merges: true
 
-# This line should *not* be indented
-media_folder: "assets/images" # Media files will be stored in the repo under images/uploads
+# used together with `npx netlify-cms-proxy-server`. https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
+local_backend: true
 
+media_folder: static/img
+public_folder: /img
+
+# Docs: https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "content/main" # The path to the folder where the documents are stored
-    filter:
-      field: language
-      value: en
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
-      - { label: "Body", name: "body", widget: "markdown" }
+  # - label: 'Site settings'
+  #   name: 'site'
+  #   files:
+  #     - label: 'Info'
+  #       name: 'info'
+  #       file: 'content/site/info.json'
+  #       format: 'json'
+  #       editor:
+  #         preview: false
+  #       fields:
+  #         - { label: Site Name, name: sitename, widget: string, hint: 'This is used for the site title' }
+  #         - {
+  #             label: Site Description,
+  #             name: sitedescription,
+  #             widget: string,
+  #             hint: 'This is used as descriptive text for links that link to this site',
+  #           }
+  #         - {
+  #             label: Site Language,
+  #             name: sitelang,
+  #             widget: string,
+  #             pattern: ['^[a-z]{2}([-])?([A-Za-z]{2})?$', 'Must match "xx" or "xx-XX" syntax (ex. "en" or "sv-SE")'],
+  #           }
+  #         # - { label: Site Email, name: siteemail, widget: string, required: false }
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    format: "frontmatter"
+    slug: "{{fields.createdAt}}-{{slug}}"
+    # editor:
+    #   preview: true
+    fields:
+      - {
+          label: "Created Date",
+          name: "createdAt",
+          widget: "datetime",
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+        }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    folder: "content/projects"
+    create: true
+    format: "frontmatter"
+    slug: "{{slug}}"
+    preview_path: "projects/{{slug}}"
+    fields:
+      - {
+          label: "Project Category",
+          name: "category",
+          widget: "select",
+          default: "animals",
+          options:
+            [
+              { label: "Animals", value: "animals" },
+              { label: "Food", value: "food" },
+            ],
+        }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Cover Image",
+          name: "cover",
+          widget: "image",
+          required: false,
+          allow_multiple: false,
+        }
+      - { label: "Content", name: "body", widget: "markdown", required: false }
+      - {
+          label: "Gallery",
+          name: "gallery",
+          widget: "list",
+          required: false,
+          summary: "{{fields.image}}",
+          field: { label: "Image", name: "image", widget: "image" },
+        }
