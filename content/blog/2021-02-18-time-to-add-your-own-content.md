@@ -1,6 +1,6 @@
 ---
 createdAt: 2022-07-26T20:08:06.794Z
-title: Time to add your own content and test content
+title: Megváltozott adat
 description: Remove all of the .md-files in the /content folder and go at it!
 ---
 ## Sit liquentibus sinu verbis et spatiarer laedar
