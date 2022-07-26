@@ -1,17 +1,18 @@
-site_url: https://ntn-boilerplate.netlify.app/
-logo_url: https://ntn-boilerplate.netlify.app/icon.png
+site_url: https://github.com/r4nd3l/Nuxt3
+logo_url: https://github.com/r4nd3l/Nuxt3/public/img/icon.png
 
 publish_mode: editorial_workflow
 backend:
-  name: git-gateway
+  name: github
+  repo: r4nd3l/Nuxt3
   branch: feature/netlify
   squash_merges: true
 
 # used together with `npx netlify-cms-proxy-server`. https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
 local_backend: true
 
-media_folder: static/img
-public_folder: /img
+media_folder: "/assets/images"
+public_folder: "/public/img"
 
 # Docs: https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
