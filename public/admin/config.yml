@@ -1,5 +1,6 @@
-site_url: https://github.com/r4nd3l/Nuxt3
-logo_url: https://github.com/r4nd3l/Nuxt3/public/img/icon.png
+site_url: http://localhost:3000
+# site_url: https://github.com/r4nd3l/Nuxt3
+logo_url: https://raw.githubusercontent.com/r4nd3l/Nuxt3/feature/netlify/public/img/myLogo.png
 
 publish_mode: editorial_workflow
 backend:
