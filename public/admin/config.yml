@@ -17,12 +17,11 @@ public_folder: "/public/img"
 
 # Docs: https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
-  - name: "Main"
+  - name: "main"
     label: "MainPage"
-    folder: "content/00.main"
+    folder: content/00.main
     create: true
     format: "frontmatter"
-    slug: "{{fields.createdAt}}-{{slug}}"
     editor:
       preview: true
     fields:
