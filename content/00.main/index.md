@@ -1,6 +1,6 @@
 ---
 createdAt: 2022-08-01T17:29:41.349Z
-title: MainEdited✅
+title: MainEdited
 description: MainPageDescription
 button: Get Started Now
 ---
