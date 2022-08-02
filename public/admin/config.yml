@@ -19,7 +19,7 @@ public_folder: "/public/img"
 collections:
   - name: "main"
     label: "Main"
-    folder: "content/00.main"
+    folder: "content/01.main"
     create: true
     format: "frontmatter"
     editor:
