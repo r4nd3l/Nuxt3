@@ -18,8 +18,102 @@ public_folder: "/public/img"
 # Docs: https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
   - name: "main"
-    label: "MainPage"
+    label: "Main"
     folder: "content/00.main"
+    create: true
+    format: "frontmatter"
+    editor:
+      preview: true
+    fields:
+      - {
+          label: "Created Date",
+          name: "createdAt",
+          widget: "datetime",
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+        }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+      - { label: "Button", name: "button", widget: "string", required: true }
+
+  - name: "home"
+    label: "Home"
+    folder: "content/02.home"
+    create: true
+    format: "frontmatter"
+    slug: "{{fields.createdAt}}-{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - {
+          label: "Created Date",
+          name: "createdAt",
+          widget: "datetime",
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+        }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  - name: "about"
+    label: "About"
+    label_singular: "About"
+    folder: "content/03.about"
+    create: true
+    format: "frontmatter"
+    slug: "{{slug}}"
+    preview_path: "projects/{{slug}}"
+    fields:
+      - {
+          label: "Project Category",
+          name: "category",
+          widget: "select",
+          default: "animals",
+          options:
+            [
+              { label: "Animals", value: "animals" },
+              { label: "Food", value: "food" },
+            ],
+        }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Cover Image",
+          name: "cover",
+          widget: "image",
+          required: false,
+          allow_multiple: false,
+        }
+      - { label: "Content", name: "body", widget: "markdown", required: false }
+      - {
+          label: "Gallery",
+          name: "gallery",
+          widget: "list",
+          required: false,
+          summary: "{{fields.image}}",
+          field: { label: "Image", name: "image", widget: "image" },
+        }
+
+  - name: "single"
+    label: "Single"
+    folder: "content/04.single"
     create: true
     format: "frontmatter"
     editor:
@@ -66,47 +160,3 @@ collections:
           required: false,
         }
       - { label: "Body", name: "body", widget: "markdown", required: false }
-
-  - name: "projects"
-    label: "Projects"
-    label_singular: "Project"
-    folder: "content/projects"
-    create: true
-    format: "frontmatter"
-    slug: "{{slug}}"
-    preview_path: "projects/{{slug}}"
-    fields:
-      - {
-          label: "Project Category",
-          name: "category",
-          widget: "select",
-          default: "animals",
-          options:
-            [
-              { label: "Animals", value: "animals" },
-              { label: "Food", value: "food" },
-            ],
-        }
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - {
-          label: "Description",
-          name: "description",
-          widget: "string",
-          required: false,
-        }
-      - {
-          label: "Cover Image",
-          name: "cover",
-          widget: "image",
-          required: false,
-          allow_multiple: false,
-        }
-      - { label: "Content", name: "body", widget: "markdown", required: false }
-      - {
-          label: "Gallery",
-          name: "gallery",
-          widget: "list",
-          required: false,
-          summary: "{{fields.image}}",
-          field: { label: "Image", name: "image", widget: "image" },
-        }
