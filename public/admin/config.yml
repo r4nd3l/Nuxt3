@@ -135,3 +135,21 @@ collections:
         }
       - { label: "Body", name: "body", widget: "markdown", required: false }
       - { label: "Button", name: "button", widget: "string", required: true }
+
+  - name: "footer"
+    label: "Footer"
+    folder: "content/_partials/footer"
+    create: true
+    format: "frontmatter"
+    editor:
+      preview: true
+    fields:
+      - {
+          label: "Created Date",
+          name: "createdAt",
+          widget: "datetime",
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+        }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Button", name: "button", widget: "string", required: true }
