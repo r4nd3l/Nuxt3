@@ -152,4 +152,4 @@ collections:
           time_format: false,
         }
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Button", name: "button", widget: "string", required: true }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
