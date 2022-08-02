@@ -42,8 +42,6 @@ collections:
       - { label: "Body", name: "body", widget: "markdown", required: false }
       - { label: "Button", name: "button", widget: "string", required: true }
 
-  ---
-
   - name: "blog"
     label: "Blog"
     folder: "content/blog"
@@ -68,8 +66,6 @@ collections:
           required: false,
         }
       - { label: "Body", name: "body", widget: "markdown", required: false }
-
-  ---
 
   - name: "projects"
     label: "Projects"
