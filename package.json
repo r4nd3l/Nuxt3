@@ -9,12 +9,13 @@
   "devDependencies": {
     "@nuxt/content": "^2.0.0",
     "autoprefixer": "^10.4.7",
-    "nuxt": "^3.0.0-rc.4",
+    "nuxt": "^3.0.0-rc.8",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.5"
   },
   "dependencies": {
     "daisyui": "^2.19.0",
+    "fs": "^0.0.1-security",
     "material-icons": "^1.11.4",
     "netlify-cms": "^2.10.192",
     "netlify-cms-app": "^2.15.72",
